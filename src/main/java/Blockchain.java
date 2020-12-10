@@ -67,10 +67,10 @@ public class Blockchain {
                     con.disconnect();
                     ChainResponse response =
                             gson.fromJson(content.toString(), ChainResponse.class);
-                    if (response.length > maxLen &&
-                            GDRvalidChain(response.chain)) {
-                        maxLen = response.length;
-                        newChain = response.chain;
+                    if (response.GDRlength > maxLen &&
+                            GDRvalidChain(response.GDRchain)) {
+                        maxLen = response.GDRlength;
+                        newChain = response.GDRchain;
                     }
                 }
             }
